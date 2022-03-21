@@ -116,3 +116,39 @@ select max(salary) from emp;
 -- subquery 
 SELECT ename, salary FROM emp WHERE salary = 
 (SELECT max(salary) FROM emp);
+
+SELECT * FROM emp;
+SELECT * FROM emp5;
+
+COMMIT ;
+
+-- error
+INSERT INTO emp (eid, ename, salary, did) VALUES (106, 'SonuSonuSonuSonu', 50000, 10);
+
+
+drop table t1;
+
+create table t1 (c1 int);
+
+insert into t1 values (10);
+insert into t1 values(20);
+insert into t1 values(30);
+
+select * from t1;
+
+delete from t1 where c1 = 10;
+-- delete t1 where c1 = 20;
+
+commit; 
+
+drop table emp_table;
+
+CREATE TABLE emp_table(
+	employee_id INT CONSTRAINT emp_table_pk PRIMARY KEY, 
+	first_name VARCHAR(10), 
+	salary DECIMAL);
+
+select * from emp_table;
+
+
+
